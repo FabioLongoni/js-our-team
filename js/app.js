@@ -1,7 +1,7 @@
 
 const memberTeam = {
     name: 'Wayne Barnett',
-    position: 'Founder & CEO',
+    position: ' Founder & CEO',
     img: 'wayne-barnett-founder-ceo.jpg',
 }
 
@@ -16,11 +16,11 @@ function createMemberTeam(name,position,img) {
 
 const membersTeam = [
     memberTeam,
-    createMemberTeam('Angela Caroll','Chief Editor','angela-caroll-chief-editor.jpg'),
-    createMemberTeam('Walter Gordon','Office Manager','walter-gordon-office-manager.jpg'),
-    createMemberTeam('Angela Lopez','Social Media Manager','angela-lopez-social-media-manager.jpg'),
-    createMemberTeam('Scott Estrada','Developer','scott-estrada-developer.jpg'),
-    createMemberTeam('Barbara Ramos','Graphic Designer','barbara-ramos-graphic-designer.jpg'),
+    createMemberTeam('Angela Caroll',' Chief Editor','angela-caroll-chief-editor.jpg'),
+    createMemberTeam('Walter Gordon',' Office Manager','walter-gordon-office-manager.jpg'),
+    createMemberTeam('Angela Lopez',' Social Media Manager','angela-lopez-social-media-manager.jpg'),
+    createMemberTeam('Scott Estrada',' Developer','scott-estrada-developer.jpg'),
+    createMemberTeam('Barbara Ramos',' Graphic Designer','barbara-ramos-graphic-designer.jpg'),
 ]
 
 console.log(membersTeam);
@@ -33,11 +33,11 @@ membersTeam.forEach((memberTeam) => {
     const liMemberTeam = document.createElement('li');
     liMemberTeam.classList.add('member_team');
     console.log(liMemberTeam);
-    liMemberTeam.append(memberTeam.name, memberTeam.position, memberTeam.img);
+    liMemberTeam.append(memberTeam.name, memberTeam.position);
     memberListEl.append(liMemberTeam);
 
     const image = document.createElement('img');
-    image.src = memberTeam.img;
+    image.src = 'img/' + memberTeam.img;
     console.log(image);
     liMemberTeam.append(image);
 });
