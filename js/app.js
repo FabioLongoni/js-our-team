@@ -30,5 +30,11 @@ const memberListEl = document.querySelector('.member_team_wrapper');
 
 //concateno oggetti dell'array all'elemento del DOM
 membersTeam.forEach((memberTeam) => {
-    memberListEl.innerHTML += `<li>${memberTeam.name} ${memberTeam.position} ${memberTeam.img}</li>`
+    const liMemberTeam = document.createElement('li');
+    console.log(liMemberTeam);
+    liMemberTeam.append(memberTeam.name, memberTeam.position, memberTeam.img);
+    memberListEl.append(liMemberTeam);
 });
+
+
+// memberListEl.innerHTML += `<li>${memberTeam.name} ${memberTeam.position} ${memberTeam.img}</li>`
