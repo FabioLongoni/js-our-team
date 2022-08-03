@@ -39,7 +39,7 @@ membersTeam.forEach((memberTeam) => {
     const image = document.createElement('img');
     image.src = memberTeam.img;
     console.log(image);
-    memberListEl.append(image);
+    liMemberTeam.append(image);
 });
 
 
