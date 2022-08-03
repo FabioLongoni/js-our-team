@@ -1,13 +1,8 @@
 
-
 const memberTeam = {
     name: 'Wayne Barnett',
     position: 'Founder & CEO',
     img: 'wayne-barnett-founder-ceo.jpg',
-}
-
-for (let key in memberTeam) {
-    console.log(memberTeam[key]);
 }
 
 function createMemberTeam(name,position,img) {
@@ -29,3 +24,11 @@ const membersTeam = [
 ]
 
 console.log(membersTeam);
+
+//recupero elemento del DOM
+const memberListEl = document.querySelector('.member_team_wrapper');
+
+//concateno oggetti dell'array all'elemento del DOM
+membersTeam.forEach((memberTeam) => {
+    memberListEl.innerHTML += `<li>${memberTeam.name} ${memberTeam.position} ${memberTeam.img}</li>`
+});
